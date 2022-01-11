@@ -25,15 +25,39 @@
 
     <!-- favicon -->
     <link rel="shortcut icon" href="{{ asset('assets/images/todosmart.png') }}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 
 </head>
+<script>
+    jQuery(document).ready(function($){
+        $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+        $("i", this).toggleClass("fa-arrow-circle-right fa-arrow-circle-down");
+        });
+
+    })
+    </script>
 
 <body>
     <div id="app">
         @include('navbar')
         <main class="py-4">
-            @yield('content')
+            <div>
+
+                <div class="w-25 float-left">
+                    @include('sidebar')
+                </div>
+                <div class="float-right">
+                    @include('sidebarRight')
+                </div>
+                <div>
+                    @yield('content')
+                </div>
+            </div>
+
         </main>
-    </div>
+        </div>
 </body>
 </html>
