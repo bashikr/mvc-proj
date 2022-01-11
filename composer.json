@@ -32,7 +32,7 @@
     "extra": {
         "laravel": {
             "dont-discover": [
-                "laravel/ui"
+                "laravel/dusk"
             ]
         }
     },

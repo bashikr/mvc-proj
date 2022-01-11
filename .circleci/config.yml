@@ -19,6 +19,8 @@ jobs: # a collection of steps
 
         #- run: composer install -n --prefer-dist
         - run: make install
+        - run: composer install
+        - run: composer update
 
         - save_cache:
             paths:
