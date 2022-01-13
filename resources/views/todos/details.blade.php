@@ -18,7 +18,7 @@
                             <p class="card-text">{{$todo->content}}</p>
                             <p class="card-text">{{$todo->starts_at}}</p>
                             <a href="{{ URL::to('edit', $todo->id)}}"><span class="btn btn-primary">Edit</span></a>
-                            <a href="{{ URL::to('delete', $todo->id)}}"><span class="btn btn-danger">Delete</span></a>
+                            <a href="{{ URL::to('delete', [$todo->id, 'home'])}}"><span class="btn btn-danger">Delete</span></a>
                         </div>
                 </div>
             </div>

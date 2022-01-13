@@ -144,7 +144,6 @@ class TodosController extends Controller
      */
     public function destroy(Todo $todo)
     {
-
         $todo->delete();
 
         return redirect('/');
