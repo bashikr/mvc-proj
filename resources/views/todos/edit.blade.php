@@ -23,7 +23,7 @@
                         </div>
                         <div class="form-group m-3">
                             <label for="title">Todo Name</label>
-                            <input type="text" class="form-control" name="title" value="{{ $todo->title }}">
+                            <input type="text" class="form-control" name="title" value="{{ $todo->title }}" maxlength="255">
                         </div>
                         <div class="form-group m-3">
                             <label for="date">Todo Date</label>
@@ -33,7 +33,7 @@
                             <label for="name">Note Color</label>
                             <div id="cp2" class="input-group colorpicker colorpicker-component">
 
-                                <input type="text" value="{{ $todo->color }}" class="form-control" name="color" />
+                                <input type="text" value="{{ $todo->color }}" class="form-control" name="color" maxlength="255" />
 
                                 <span class="input-group-addon"><i style="padding: 18.5px; margin-top:-1.7px;"></i></span>
 

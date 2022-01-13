@@ -31,7 +31,7 @@
                     @csrf
                     <div class="form-group m-3">
                         <label for="title">Todo Name</label>
-                        <input type="text" class="form-control" name="title" required>
+                        <input type="text" class="form-control" name="title" required maxlength="255">
                     </div>
                     <div class="form-group m-3">
                         <label for="date">Todo Date</label>
@@ -41,7 +41,7 @@
                         <label for="name">Note Color</label>
                         <div id="cp2" class="input-group colorpicker colorpicker-component">
 
-                            <input type="text" value="#00AABB" class="form-control"  name="color"/>
+                            <input type="text" value="#00AABB" class="form-control"  name="color" maxlength="255"/>
 
                             <span class="input-group-addon"><i style="padding: 18.5px; margin-top:-1.7px;"></i></span>
 

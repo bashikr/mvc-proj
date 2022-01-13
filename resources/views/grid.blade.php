@@ -18,7 +18,7 @@ $bootstrapColWidth = 12 / $numOfCols;
                 @foreach ($todos as $todo)
                     @if ($todo->author_email === $user->email)
                         <div class="col-md-{{ $bootstrapColWidth }}">
-                            <div style="box-shadow: -5px 6px  10px 5px rgb(197, 196, 196);">
+                            <div style="box-shadow: -5px 6px  10px 5px rgb(197, 196, 196); margin-top:10px;">
 
                                 <div>
                                     <h5 class="card-header text-center" style="background: {{ $todo->color }}">
