@@ -27,7 +27,7 @@ $bootstrapColWidth = 12 / $numOfCols;
                                 <div class="card-body" style="background: {{ $todo->color }}; height: 300px;">
                                     <div class="h-75">
                                         <p class="card-text">
-                                            {{ substr(wordwrap($todo->content, 30, "\n", true), 0, 300) }}
+                                            {{ substr(wordwrap($todo->content, 25, "\n", true), 0, 200) }}
                                         </p>
                                     </div>
                                     <div class="text-center">
