@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1642107929">
-  <project timestamp="1642107929">
+<coverage generated="1642115879">
+  <project timestamp="1642115879">
     <file name="C:\Users\basha\dbwebb-kurser\mvc\me\proj\app\Http\Controllers\Auth\ConfirmPasswordController.php">
       <class name="App\Http\Controllers\Auth\ConfirmPasswordController" namespace="global">
         <metrics complexity="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="0" elements="3" coveredelements="0"/>
