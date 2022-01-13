@@ -30,9 +30,11 @@
 
 
 
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-colorpicker/2.5.1/css/bootstrap-colorpicker.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-colorpicker/2.5.1/css/bootstrap-colorpicker.min.css"
+        rel="stylesheet">
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-colorpicker/2.5.1/js/bootstrap-colorpicker.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-colorpicker/2.5.1/js/bootstrap-colorpicker.min.js">
+    </script>
 
 </head>
 <script>
@@ -51,17 +53,8 @@
         @include('navbar')
         <main class="py-4">
             <div>
-                <div class="w-25 float-left">
-                    @include('sidebar')
-                </div>
-                <div class="float-right">
-                    @include('sidebarRight')
-                </div>
-                <div>
-                    @yield('content')
-                </div>
+                @yield('content')
             </div>
-
         </main>
     </div>
 </body>

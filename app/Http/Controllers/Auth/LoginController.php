@@ -35,6 +35,7 @@ class LoginController extends Controller
      */
     public function __construct()
     {
+        session()->flash('fail-login', 'The password or email are not correct!');
         $this->middleware('guest')->except('logout');
     }
 }

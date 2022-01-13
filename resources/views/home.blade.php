@@ -1,17 +1,9 @@
 @extends('layouts.app')
 
-@section('content')
-<div class="container">
-    <div class="row justify-content-center ">
-        <div class="col-md-10">
-            <div class="card">
-                <div class="card-header">test</div>
+@section('title')
+    Create Todo
+@endsection
 
-                <div class="card-body">
-                   test
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+@section('content')
+    @include('todos.create')
 @endsection

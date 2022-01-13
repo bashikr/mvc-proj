@@ -16,9 +16,12 @@ class CreateTodosTable extends Migration
         Schema::create('todos', function (Blueprint $table) {
             $table->id();
             $table->string('title');
+            $table->text('content');
             $table->string('type');
-            $table->string('content');
-            $table->date('startsAt');
+            $table->string('author_email');
+            $table->string('author_name');
+            $table->date('starts_at');
+            $table->string('color');
             $table->timestamps();
         });
     }
