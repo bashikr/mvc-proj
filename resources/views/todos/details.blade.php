@@ -14,7 +14,6 @@
                         </div>
                         <div class="card-body" style="background: {{$todo->color}}">
                             <h5 class="card-title">{{$todo->title}}</h5>
-                            {{-- <p class="card-text">{{$todo->author}}</p> --}}
                             <p class="card-text">{{$todo->content}}</p>
                             <p class="card-text">{{$todo->starts_at}}</p>
                             <a href="{{ URL::to('edit', $todo->id)}}"><span class="btn btn-primary">Edit</span></a>
