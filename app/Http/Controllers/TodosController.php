@@ -142,10 +142,20 @@ class TodosController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Todo $todo)
+    public function destroy(Todo $todo, $redirectTo, Request $request)
     {
-        $todo->delete();
+        if ($redirectTo == 'home') {
+            $todo->delete();
 
-        return redirect('/');
+            return redirect('/');
+        }
+
+        if ($redirectTo == 'grid') {
+            $todo->delete();
+            $todos = DB::table('todos')->get();
+            $request->session()->put('todos', $todos);
+
+            return redirect('/grid');
+        };
     }
 }
