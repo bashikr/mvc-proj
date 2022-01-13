@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1642079445">
-  <project timestamp="1642079445">
+<coverage generated="1642107929">
+  <project timestamp="1642107929">
     <file name="C:\Users\basha\dbwebb-kurser\mvc\me\proj\app\Http\Controllers\Auth\ConfirmPasswordController.php">
       <class name="App\Http\Controllers\Auth\ConfirmPasswordController" namespace="global">
         <metrics complexity="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="0" elements="3" coveredelements="0"/>
@@ -79,7 +79,7 @@
     </file>
     <file name="C:\Users\basha\dbwebb-kurser\mvc\me\proj\app\Http\Controllers\TodosController.php">
       <class name="App\Http\Controllers\TodosController" namespace="global">
-        <metrics complexity="14" methods="6" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="49" coveredstatements="3" elements="55" coveredelements="4"/>
+        <metrics complexity="14" methods="6" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="52" coveredstatements="3" elements="58" coveredelements="4"/>
       </class>
       <line num="19" type="method" name="index" visibility="public" complexity="1" crap="1" count="2"/>
       <line num="21" type="stmt" count="2"/>
@@ -106,37 +106,40 @@
       <line num="74" type="stmt" count="0"/>
       <line num="76" type="stmt" count="0"/>
       <line num="77" type="stmt" count="0"/>
-      <line num="78" type="stmt" count="0"/>
-      <line num="87" type="method" name="details" visibility="public" complexity="3" crap="12" count="0"/>
-      <line num="89" type="stmt" count="0"/>
-      <line num="91" type="stmt" count="0"/>
-      <line num="93" type="stmt" count="0"/>
+      <line num="79" type="stmt" count="0"/>
+      <line num="90" type="method" name="details" visibility="public" complexity="3" crap="12" count="0"/>
+      <line num="92" type="stmt" count="0"/>
       <line num="94" type="stmt" count="0"/>
-      <line num="95" type="stmt" count="0"/>
-      <line num="103" type="method" name="update" visibility="public" complexity="2" crap="6" count="0"/>
-      <line num="106" type="stmt" count="0"/>
-      <line num="107" type="stmt" count="0"/>
+      <line num="96" type="stmt" count="0"/>
+      <line num="97" type="stmt" count="0"/>
+      <line num="99" type="stmt" count="0"/>
+      <line num="109" type="method" name="update" visibility="public" complexity="2" crap="6" count="0"/>
       <line num="112" type="stmt" count="0"/>
-      <line num="115" type="stmt" count="0"/>
-      <line num="117" type="stmt" count="0"/>
-      <line num="119" type="stmt" count="0"/>
-      <line num="120" type="stmt" count="0"/>
+      <line num="113" type="stmt" count="0"/>
+      <line num="118" type="stmt" count="0"/>
       <line num="121" type="stmt" count="0"/>
-      <line num="122" type="stmt" count="0"/>
       <line num="123" type="stmt" count="0"/>
-      <line num="124" type="stmt" count="0"/>
       <line num="125" type="stmt" count="0"/>
       <line num="126" type="stmt" count="0"/>
+      <line num="127" type="stmt" count="0"/>
       <line num="128" type="stmt" count="0"/>
+      <line num="129" type="stmt" count="0"/>
       <line num="130" type="stmt" count="0"/>
-      <line num="139" type="method" name="destroy" visibility="public" complexity="3" crap="12" count="0"/>
-      <line num="141" type="stmt" count="0"/>
-      <line num="142" type="stmt" count="0"/>
-      <line num="143" type="stmt" count="0"/>
-      <line num="144" type="stmt" count="0"/>
-      <line num="145" type="stmt" count="0"/>
+      <line num="131" type="stmt" count="0"/>
+      <line num="132" type="stmt" count="0"/>
+      <line num="134" type="stmt" count="0"/>
+      <line num="136" type="stmt" count="0"/>
+      <line num="145" type="method" name="destroy" visibility="public" complexity="3" crap="12" count="0"/>
       <line num="147" type="stmt" count="0"/>
-      <metrics loc="148" ncloc="114" classes="1" methods="6" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="49" coveredstatements="3" elements="55" coveredelements="4"/>
+      <line num="148" type="stmt" count="0"/>
+      <line num="150" type="stmt" count="0"/>
+      <line num="153" type="stmt" count="0"/>
+      <line num="154" type="stmt" count="0"/>
+      <line num="155" type="stmt" count="0"/>
+      <line num="156" type="stmt" count="0"/>
+      <line num="158" type="stmt" count="0"/>
+      <line num="160" type="stmt" count="0"/>
+      <metrics loc="161" ncloc="127" classes="1" methods="6" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="52" coveredstatements="3" elements="58" coveredelements="4"/>
     </file>
     <file name="C:\Users\basha\dbwebb-kurser\mvc\me\proj\app\Todo.php">
       <class name="App\Todo" namespace="global">
@@ -150,6 +153,6 @@
       </class>
       <metrics loc="39" ncloc="24" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
     </file>
-    <metrics files="11" loc="506" ncloc="315" classes="6" methods="14" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="69" coveredstatements="3" elements="83" coveredelements="4"/>
+    <metrics files="11" loc="519" ncloc="328" classes="6" methods="14" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="72" coveredstatements="3" elements="86" coveredelements="4"/>
   </project>
 </coverage>

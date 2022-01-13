@@ -14,7 +14,8 @@ $user = Auth::user();
                     @foreach ($todos as $todo)
                         @if ($todo->author_email === $user->email)
                             <li class="list-group-item"><a href="{{ URL::to('details', $todo->id) }}"
-                                    style="color: cornflowerblue">{{ $todo->title }}</a></li>
+                                    style="color: cornflowerblue">{{ strlen($todo->title) >= 25 ? substr($todo->title, 0, 30) . '...' : $todo->title }}</a>
+                            </li>
                         @endif
                     @endforeach
                 @endif
