@@ -46,7 +46,7 @@
     })
 </script>
 
-<body>
+<body class="d-flex flex-column min-vh-100">
     <div id="app">
         @include('navbar')
         <main class="py-4">
@@ -61,9 +61,9 @@
                     @yield('content')
                 </div>
             </div>
-
         </main>
     </div>
 </body>
+@include('footer')
 
 </html>

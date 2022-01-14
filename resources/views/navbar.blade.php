@@ -1,15 +1,15 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+<nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom ">
     <a class="navbar-brand" href="{{ url('/') }}">
         <img src="{{ URL::asset('assets/images/todosmart.png') }}" class="icon" alt="todosmarticon">
     </a>
     @guest
     @else
-    @if (request()->route()->uri == 'grid')
-    @else
-    <div class="pt-5">
-        <p id="menu-toggle"><i class="fas fa-arrow-circle-right"></i></p>
-    </div>
-    @endif
+        @if (request()->route()->uri == 'grid')
+        @else
+            <div class="pt-5">
+                <p id="menu-toggle"><i class="fas fa-arrow-circle-right"></i></p>
+            </div>
+        @endif
     @endguest
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -42,7 +42,7 @@
 
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                             document.getElementById('logout-form').submit();">
+                                                 document.getElementById('logout-form').submit();">
                             {{ __('Logout') }}
                         </a>
 

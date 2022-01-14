@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1642121803">
-  <project timestamp="1642121803">
+<coverage generated="1642122909">
+  <project timestamp="1642122909">
     <file name="C:\Users\basha\dbwebb-kurser\mvc\me\proj\app\Http\Controllers\Auth\ConfirmPasswordController.php">
       <class name="App\Http\Controllers\Auth\ConfirmPasswordController" namespace="global">
         <metrics complexity="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="0" elements="3" coveredelements="0"/>
@@ -79,12 +79,12 @@
     </file>
     <file name="C:\Users\basha\dbwebb-kurser\mvc\me\proj\app\Http\Controllers\TodosController.php">
       <class name="App\Http\Controllers\TodosController" namespace="global">
-        <metrics complexity="14" methods="6" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="52" coveredstatements="1" elements="58" coveredelements="1"/>
+        <metrics complexity="14" methods="6" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="52" coveredstatements="3" elements="58" coveredelements="4"/>
       </class>
-      <line num="19" type="method" name="index" visibility="public" complexity="1" crap="1.30" count="2"/>
+      <line num="19" type="method" name="index" visibility="public" complexity="1" crap="1" count="2"/>
       <line num="21" type="stmt" count="2"/>
-      <line num="23" type="stmt" count="0"/>
-      <line num="25" type="stmt" count="0"/>
+      <line num="23" type="stmt" count="2"/>
+      <line num="25" type="stmt" count="2"/>
       <line num="34" type="method" name="store" visibility="public" complexity="2" crap="6" count="0"/>
       <line num="37" type="stmt" count="0"/>
       <line num="38" type="stmt" count="0"/>
@@ -139,7 +139,7 @@
       <line num="156" type="stmt" count="0"/>
       <line num="158" type="stmt" count="0"/>
       <line num="160" type="stmt" count="0"/>
-      <metrics loc="161" ncloc="127" classes="1" methods="6" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="52" coveredstatements="1" elements="58" coveredelements="1"/>
+      <metrics loc="161" ncloc="127" classes="1" methods="6" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="52" coveredstatements="3" elements="58" coveredelements="4"/>
     </file>
     <file name="C:\Users\basha\dbwebb-kurser\mvc\me\proj\app\Todo.php">
       <class name="App\Todo" namespace="global">
@@ -153,6 +153,6 @@
       </class>
       <metrics loc="39" ncloc="24" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
     </file>
-    <metrics files="11" loc="519" ncloc="328" classes="6" methods="14" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="72" coveredstatements="1" elements="86" coveredelements="1"/>
+    <metrics files="11" loc="519" ncloc="328" classes="6" methods="14" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="72" coveredstatements="3" elements="86" coveredelements="4"/>
   </project>
 </coverage>

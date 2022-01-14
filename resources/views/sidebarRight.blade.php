@@ -7,7 +7,7 @@ $user = Auth::user();
 @guest
 @else
     <div class="d-flex" id="wrapper">
-        <div class="bg-light border-left" id="sidebar-wrapper">
+        <div class="bg-white border-left" id="sidebar-wrapper">
             <div class="sidebar-heading">My Notes </div>
             <ul class="list-group">
                 @if ($todos != null)
