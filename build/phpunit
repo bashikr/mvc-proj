@@ -1,10 +1,27 @@
 PHPUnit 9.5.11 by Sebastian Bergmann and contributors.
 
-....                                                                4 / 4 (100%)
+..[41;37mF[0m[41;37mF[0m                                                                4 / 4 (100%)
 
-Time: 00:00.342, Memory: 28.00 MB
+Time: 00:42.500, Memory: 30.00 MB
 
-[30;42mOK (4 tests, 4 assertions)[0m
+There were 2 failures:
+
+1) Tests\Feature\BasicTest::testExample
+Expected status code 200 but received 500.
+Failed asserting that 200 is identical to 500.
+
+C:\Users\basha\dbwebb-kurser\mvc\me\proj\vendor\laravel\framework\src\Illuminate\Testing\TestResponse.php:186
+C:\Users\basha\dbwebb-kurser\mvc\me\proj\tests\Feature\BasicTest.php:20
+
+2) Tests\Feature\ExampleTest::testBasicTest
+Expected status code 200 but received 500.
+Failed asserting that 200 is identical to 500.
+
+C:\Users\basha\dbwebb-kurser\mvc\me\proj\vendor\laravel\framework\src\Illuminate\Testing\TestResponse.php:186
+C:\Users\basha\dbwebb-kurser\mvc\me\proj\tests\Feature\ExampleTest.php:19
+
+[37;41mFAILURES![0m
+[37;41mTests: 4[0m[37;41m, Assertions: 4[0m[37;41m, Failures: 2[0m[37;41m.[0m
 
 Generating code coverage report in Clover XML format ... done [00:00.034]
 

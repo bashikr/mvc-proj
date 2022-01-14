@@ -2,10 +2,12 @@
     <a class="navbar-brand" href="{{ url('/') }}">
         <img src="{{ URL::asset('assets/images/todosmart.png') }}" class="icon" alt="todosmarticon">
     </a>
+    @guest
+    @else
     <div class="pt-5">
         <p id="menu-toggle"><i class="fas fa-arrow-circle-right"></i></p>
     </div>
-
+    @endguest
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
