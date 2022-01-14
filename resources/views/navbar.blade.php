@@ -4,9 +4,12 @@
     </a>
     @guest
     @else
+    @if (request()->route()->uri == 'grid')
+    @else
     <div class="pt-5">
         <p id="menu-toggle"><i class="fas fa-arrow-circle-right"></i></p>
     </div>
+    @endif
     @endguest
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
