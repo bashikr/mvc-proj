@@ -31,14 +31,13 @@ Route::get('/grid', function (req $request) {
 });
 
 Route::get('/', [TodosController::class, 'index']);
+
 Route::get('details/{todo}', [TodosController::class, 'details'])->middleware('auth');
+
 Route::post('store-data', [TodosController::class, 'store'])->middleware('auth');
+
 Route::get('delete/{todo}/{redirectTo}', [TodosController::class, 'destroy'])->middleware('auth');
-
-
-
 
 Route::get('edit/{todo}', [TodosController::class, 'edit'])->middleware('auth')->name('edit');
 
 Route::post('edit/update', [TodosController::class, 'update'])->middleware('auth');
-
