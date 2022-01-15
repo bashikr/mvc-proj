@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Controllers;
 use App\Todo;
 use Dotenv\Exception\ValidationException;
 use Illuminate\Http\Request;
@@ -14,7 +13,7 @@ class TodosController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\View\View
      */
     public function index(Request $request)
     {
@@ -27,11 +26,9 @@ class TodosController extends Controller
 
     /**
      * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\RedirectResponse
      */
-    public function store()
+    public function store(Request $request)
     {
         try {
             $this->validate(request(), [
@@ -45,15 +42,21 @@ class TodosController extends Controller
 
         $data = request()->all();
 
-        $todo = new Todo();
 
-        $todo->title = $data['title'];
-        $todo->content = $data['content'];
-        $todo->starts_at = $data['date'];
-        $todo->type = 'text';
-        $todo->author_name = Auth::user()->name;
-        $todo->author_email = Auth::user()->email;
-        $todo->color = $data['color'];
+        $user = Auth::user();
+
+        $todo = new Todo([
+            "title" => $data['title'],
+            "content" => $data['content'],
+            "starts_at" => $data['date'],
+            "type" => 'text',
+            /* @phpstan-ignore-next-line */
+            "author_name" => $user->name,
+            /* @phpstan-ignore-next-line */
+            "author_email" => $user->email,
+            "color" => $data['color'],
+        ]);
+
         $todo->save();
 
         session()->flash('success', 'Todo created succesfully');
@@ -65,46 +68,41 @@ class TodosController extends Controller
      * Show the form for editing the specified resource.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\View\View|\Illuminate\Http\RedirectResponse
      */
     public function edit($id)
     {
         $todo = DB::table('todos')->find($id);
 
+        /* @phpstan-ignore-next-line */
         $userEmail = Auth::user()->email;
 
         if ($todo && $todo->author_email === $userEmail) {
             return view('todos.edit', ['todo' => $todo]);
-        } else {
-            return redirect('/');
-        }
-
+        } else return redirect('/');
     }
 
     /**
      * Show the form for editing the specified resource.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\View\View|\Illuminate\Http\RedirectResponse
      */
     public function details($id)
     {
         $todo = DB::table('todos')->find($id);
 
+        /* @phpstan-ignore-next-line */
         $userEmail = Auth::user()->email;
 
         if ($todo && $todo->author_email === $userEmail) {
             return view('todos.details', ['todo' => $todo]);
-        } else {
-            return redirect('/');
-        }
-
+        } else return redirect('/');
     }
 
     /**
      * Update the specified resource in storage.
-     *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\RedirectResponse
      */
     public function update(Todo $todo)
     {
@@ -120,13 +118,16 @@ class TodosController extends Controller
 
         $data = request()->all();
 
+        /* @phpstan-ignore-next-line */
         $res = $todo->find($data['id']);
 
         $res->title = $data['title'];
         $res->content = $data['content'];
         $res->starts_at = $data['date'];
         $res->type = 'text';
+        /* @phpstan-ignore-next-line */
         $res->author_name = Auth::user()->name;
+        /* @phpstan-ignore-next-line */
         $res->author_email = Auth::user()->email;
         $res->color = $data['color'];
         $res->save();
@@ -139,8 +140,7 @@ class TodosController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\RedirectResponse
      */
     public function destroy(Todo $todo, $redirectTo, Request $request)
     {
@@ -148,14 +148,12 @@ class TodosController extends Controller
             $todo->delete();
 
             return redirect('/');
-        }
-
-        if ($redirectTo == 'grid') {
+        } elseif ($redirectTo == 'grid') {
             $todo->delete();
             $todos = DB::table('todos')->get();
             $request->session()->put('todos', $todos);
 
             return redirect('/grid');
-        };
+        } else return redirect('/');
     }
 }

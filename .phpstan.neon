@@ -2,8 +2,9 @@ parameters:
     level: 5
     paths:
         - config
-        #- app/Models/Dice
-        #- app/Controllers/Dice
+        - app/Todo.php
+        - app/Http/Controllers/HomeController.php
+        - app/Http/Controllers/TodosController.php
         #- test
     bootstrapFiles:
         - .phpstan.constants.php

@@ -13,6 +13,8 @@ class Todo extends Model
      */
     protected $table = 'todos';
 
+    protected $fillable = [ 'title', 'content', 'starts_at', 'type', 'author_name', 'color', 'author_email'];
+
     /**
      * The primary key associated with the table.
      *
