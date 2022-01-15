@@ -12,12 +12,13 @@ MVC-PROJ is the concluding project of the MVC course which is done by Blekinge I
 
 ToDoSmart is an application that helps users to manage their own daily life by adding note cards in a colorful way. In the beginning, new users have to register a new account to be able to log in to the app. When logging in one will be redirected to the landing page where one could create a new note. After creating notes there are two ways of presenting the notes where the first one is a list of the notes' titles and could be seen in the first figure. The second way of presenting the notes is done on the grid page as demonstrated in the second figure. The application supports editing and deleting a note if so desired.
 
-![Landing page](https://github.com/bashikr/mvc-proj/bolb/main/public/assets/images/landing-page.jpg)
+![Landing page](http://www.student.bth.se/~baaa19/dbwebb-kurser/mvc/me/proj/public/assets/images/landing-page.jpg)
+
 <p align = "center">
 Fig.1 - Landing page
 </p>
 
-![Grid](https://github.com/bashikr/mvc-proj/bolb/main/public/assets/images/grid.jpg)
+![Grid](https://github.com/bashikr/mvc-proj/blob/main/public/assets/images/grid.jpg)
 
 <p align = "center">
 Fig.2 - The Grid page
@@ -31,7 +32,7 @@ To be able to install the project and run it you have to have composer installed
 
 Afterwards make a copy of .env.example and change it to .env. Open the application on localhost. You will see a page like this
  
-![Generate app key](https://github.com/bashikr/mvc-proj/bolb/main/public/assets/images/app-key.png)
+![Generate app key](http://www.student.bth.se/~baaa19/dbwebb-kurser/mvc/me/proj/public/assets/images/app-key.png)
 <p align = "center">
 Fig.3 - App key generation
 </p>
@@ -48,7 +49,7 @@ Click on generate and then head to .env where the app key has been created. On l
 
 Create a database locally (If you work on your local machine) and then add its name to the DB_DATABASE variable instead of **laravel**. Be sure to attach your DB_USERNAME and DB_PASSWORD. When you are finished from configuring the database connection head to the website on localhost where you will get a message like this:
 
-![Run migrations](https://github.com/bashikr/mvc-proj/bolb/main/public/assets/images/migrations.png)
+![Run migrations](http://www.student.bth.se/~baaa19/dbwebb-kurser/mvc/me/proj/public/assets/images/migrations.png)
 <p align = "center">
 Fig.4 - Database migration
 </p>
