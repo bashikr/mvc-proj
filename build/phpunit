@@ -1,53 +1,11 @@
 PHPUnit 9.5.11 by Sebastian Bergmann and contributors.
 
-..[31;1mE[0m...............                                                18 / 18 (100%)
+.................                                                 17 / 17 (100%)
 
-Time: 00:01.707, Memory: 46.00 MB
+Time: 00:01.627, Memory: 44.00 MB
 
-There was 1 error:
+[30;42mOK (17 tests, 38 assertions)[0m
 
-1) Tests\Feature\ConfirmPasswordControllerTest::testConfirmPassword
-Illuminate\Database\QueryException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'username' in 'where clause' (SQL: select * from `users` where `name` = required|unique:users and `username` = required|unique:users,username|email|min:3 limit 1)
+Generating code coverage report in Clover XML format ... done [00:00.026]
 
-C:\Users\basha\dbwebb-kurser\mvc\me\proj\vendor\laravel\framework\src\Illuminate\Database\Connection.php:671
-C:\Users\basha\dbwebb-kurser\mvc\me\proj\vendor\laravel\framework\src\Illuminate\Database\Connection.php:631
-C:\Users\basha\dbwebb-kurser\mvc\me\proj\vendor\laravel\framework\src\Illuminate\Database\Connection.php:339
-C:\Users\basha\dbwebb-kurser\mvc\me\proj\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php:2270
-C:\Users\basha\dbwebb-kurser\mvc\me\proj\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php:2258
-C:\Users\basha\dbwebb-kurser\mvc\me\proj\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php:2753
-C:\Users\basha\dbwebb-kurser\mvc\me\proj\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php:2259
-C:\Users\basha\dbwebb-kurser\mvc\me\proj\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Builder.php:548
-C:\Users\basha\dbwebb-kurser\mvc\me\proj\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Builder.php:532
-C:\Users\basha\dbwebb-kurser\mvc\me\proj\vendor\laravel\framework\src\Illuminate\Database\Concerns\BuildsQueries.php:143
-C:\Users\basha\dbwebb-kurser\mvc\me\proj\vendor\laravel\framework\src\Illuminate\Auth\EloquentUserProvider.php:131
-C:\Users\basha\dbwebb-kurser\mvc\me\proj\vendor\laravel\framework\src\Illuminate\Auth\SessionGuard.php:259
-C:\Users\basha\dbwebb-kurser\mvc\me\proj\vendor\laravel\framework\src\Illuminate\Auth\AuthManager.php:307
-C:\Users\basha\dbwebb-kurser\mvc\me\proj\vendor\laravel\framework\src\Illuminate\Support\Facades\Facade.php:261
-C:\Users\basha\dbwebb-kurser\mvc\me\proj\tests\Feature\ConfirmPasswordControllerTest.php:31
-
-Caused by
-PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'username' in 'where clause'
-
-C:\Users\basha\dbwebb-kurser\mvc\me\proj\vendor\laravel\framework\src\Illuminate\Database\Connection.php:331
-C:\Users\basha\dbwebb-kurser\mvc\me\proj\vendor\laravel\framework\src\Illuminate\Database\Connection.php:664
-C:\Users\basha\dbwebb-kurser\mvc\me\proj\vendor\laravel\framework\src\Illuminate\Database\Connection.php:631
-C:\Users\basha\dbwebb-kurser\mvc\me\proj\vendor\laravel\framework\src\Illuminate\Database\Connection.php:339
-C:\Users\basha\dbwebb-kurser\mvc\me\proj\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php:2270
-C:\Users\basha\dbwebb-kurser\mvc\me\proj\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php:2258
-C:\Users\basha\dbwebb-kurser\mvc\me\proj\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php:2753
-C:\Users\basha\dbwebb-kurser\mvc\me\proj\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php:2259
-C:\Users\basha\dbwebb-kurser\mvc\me\proj\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Builder.php:548
-C:\Users\basha\dbwebb-kurser\mvc\me\proj\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Builder.php:532
-C:\Users\basha\dbwebb-kurser\mvc\me\proj\vendor\laravel\framework\src\Illuminate\Database\Concerns\BuildsQueries.php:143
-C:\Users\basha\dbwebb-kurser\mvc\me\proj\vendor\laravel\framework\src\Illuminate\Auth\EloquentUserProvider.php:131
-C:\Users\basha\dbwebb-kurser\mvc\me\proj\vendor\laravel\framework\src\Illuminate\Auth\SessionGuard.php:259
-C:\Users\basha\dbwebb-kurser\mvc\me\proj\vendor\laravel\framework\src\Illuminate\Auth\AuthManager.php:307
-C:\Users\basha\dbwebb-kurser\mvc\me\proj\vendor\laravel\framework\src\Illuminate\Support\Facades\Facade.php:261
-C:\Users\basha\dbwebb-kurser\mvc\me\proj\tests\Feature\ConfirmPasswordControllerTest.php:31
-
-[37;41mERRORS![0m
-[37;41mTests: 18[0m[37;41m, Assertions: 38[0m[37;41m, Errors: 1[0m[37;41m.[0m
-
-Generating code coverage report in Clover XML format ... done [00:00.013]
-
-Generating code coverage report in HTML format ... done [00:00.064]
+Generating code coverage report in HTML format ... done [00:00.090]

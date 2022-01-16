@@ -120,8 +120,6 @@ class TodoTest extends TestCase
 
     public function testNotLoggedInWhenNavigatingToGridRoute()
     {
-        Auth::logout();
-
         $response = $this->get('/grid');
 
         $response->assertStatus(302);

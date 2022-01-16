@@ -44,7 +44,7 @@ class UserLoginControllerTest extends TestCase
 
         $response = $this->json('POST', '/register', $userRegister);
 
-        Auth::logout();
+        auth()->logout();
 
         $userLogin = [
             'email' => 'johndoe@test.com',
