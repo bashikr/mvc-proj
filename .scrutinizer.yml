@@ -2,33 +2,33 @@ imports:
     - php
 
 filter:
-    paths: ["app/Models/*", "routes/web.php"]
-    excluded_paths: [vendor/*, app/Models/User.php]
-
-tools:
-    php_analyzer: true
+    excluded_paths: [vendor/*, test/*]
 
 build:
-    project_setup:
-        override:
-            - true
+    environment:
+        php: '7.4'
+        mysql: '5.7'
+        hosts:
+            laravel.dev: '127.0.0.1'
+        variables:
+            APP_KEY: 'base64:zOltNsmgj8zCd0Bz0LkD+H9Q8pCoSq4OLPrpdLfyD6E='
+            APP_ENV: 'testing'
+            APP_URL: 'http://laravel.dev'
+            API_HOST: 'laravel.dev'
+            DB_HOST: '127.0.0.1'
+            DB_DATABASE: 'scrutinizer'
+            DB_USERNAME: 'root'
+            DB_PASSWORD: ''
+            MAIL_DRIVER: 'log'
     nodes:
         my-tests:
             environment:
                 php:
                     version: 7.4
-        analysis:
-              tests:
-                override:
-                  - php-scrutinizer-run
-
     tests:
-        before:
-            - cp .env.scrutinizer .env
-            - php artisan key:generate
         override:
             -
-                command: make phpunit
+                command: "make phpunit"
                 coverage:
-                    file: build/coverage.clover
-                    format: php-clover
+                    file: "build/coverage.clover"
+                    format: "php-clover"
