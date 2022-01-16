@@ -22,13 +22,12 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/', 'HomeController@index')->name('home');
-
 Route::get('/grid', function (req $request) {
     $todos = $request->session()->get('todos');
 
     return view('grid', ['todos' => $todos, 'user' => Auth::user()]);
-});
+
+})->middleware('auth');
 
 Route::get('/', [TodosController::class, 'index']);
 

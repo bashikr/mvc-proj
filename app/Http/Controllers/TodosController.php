@@ -28,7 +28,7 @@ class TodosController extends Controller
      * Store a newly created resource in storage.
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function store(Request $request)
+    public function store()
     {
         try {
             $this->validate(request(), [
